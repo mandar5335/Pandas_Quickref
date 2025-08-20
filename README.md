@@ -1,3 +1,7 @@
+* [Pandas Tricks](#pandas_tricks)
+* [Conda Tricks](#conda_tricks)
+
+## pandas_tricks
 1. Check for certain String (e.g. 'rna' in Column 1)
    
    ```
@@ -8,3 +12,9 @@
    result = df.loc[df.groupby("LIG_TITLE")["docking_score"].idxmin()]
    idxmin = index of minimum docking score
    ```
+
+  ## conda_tricks:
+  1. Export environment without Prefix:
+     ```
+     conda env export | grep -v "^prefix: " > environment.yml
+     ```
