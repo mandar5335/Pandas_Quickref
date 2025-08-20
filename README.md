@@ -14,7 +14,11 @@
    ```
 
   ## conda_tricks:
-  1. Export environment without Prefix:
+1. Export environment without Prefix:
      ```
      conda env export | grep -v "^prefix: " > environment.yml
      ```
+2. Create environment from `environment.yml`:
+   ```
+   conda env create -f environment.yml
+   ```
