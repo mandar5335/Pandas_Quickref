@@ -22,3 +22,13 @@
    ```
    conda env create -f environment.yml
    ```
+3. Change the Default Browser to Google Chrome for Jupyter Notebooks in OS X
+   ```
+   jupyter notebook --generate-config
+   ```
+   *open ~/.jupyter/jupyter_notebook_config.py with text editor* and 
+   __add these lines__
+   ```
+   # import webbrowser
+   c.NotebookApp.browser = u'open -a /Applications/Google\ Chrome.app %s'
+   ```
